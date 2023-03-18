@@ -1,0 +1,1 @@
+from ClasePersonaje import Personaje
