@@ -1,6 +1,6 @@
 class Personaje:
     nombre=""
-    vida=15
+    vida=50
     ataque_actual=0
     defensa_actual=0
     objetos=[]
