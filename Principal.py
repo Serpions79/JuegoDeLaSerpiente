@@ -1,1 +1,10 @@
-from ClasePersonaje import Personaje
+print("Dia: 17 de Agosto")
+print("Hora: 9:38 am")
+print("Buenos dias persona")
+print("Soy tu consciencia")
+print("Hace mucho que no hablamos tu y yo")
+print("La ultima vez fue cuando tenias como 4 años")
+print("Hace tanto que hasta se me olvido tu nombre")
+
+Nombre_del_personaje=int(input())
+print("Es verdad cuanto tiempo" Nombre_del_personaje "Espero que estes tan bien como estoy yo")
