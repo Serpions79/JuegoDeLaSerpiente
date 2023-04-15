@@ -8,3 +8,7 @@ print("Hace tanto que hasta se me olvido tu nombre")
 
 Nombre_del_personaje=int(input())
 print("Es verdad cuanto tiempo" Nombre_del_personaje "Espero que estes tan bien como estoy yo")
+print(Nombre_del_personaje "Si estoy aqui hablando contigo es que algo malo ha ocurrido recuerda lo que nos dijo el tio Ben")
+print("Si comes lechugas te convertiras en un superheroe")
+print("A espera eso no")
+print("Si escuchas una voz en tu cabeza debes de ir a mi antigua casa situada en la Isla Mauricio lo entenderas cuando sea el momento idoneo")
