@@ -1,3 +1,5 @@
+from ClaseArma import Arma
+
 print("Dia: 17 de Agosto")
 print("Hora: 9:38 am")
 print("Buenos dias persona")
@@ -22,5 +24,25 @@ if decision==1:
     print("Gracias por entenderme intentare no molestarte mucho en tu cabeza")
 elif decision==2:
     print("Perdon...")
+print("5 MINUTOS DESPUES")
+print("Ok creo que la casa del tio Ben estaba a la derecha")
+print("*Se escucha un tiroteo*")
+print("Ladron Herido: *Se acerca*, Ayuda porfavor no quiero estar aqui")
+print("Ladron Herido: *Recibe un disparo en la cabeza*")
+print("Corre" + Nombre_del_personaje + " hay que salir de aqui cuanto antes")
+print("Hay una casa que parece bastante segura, pero tambien esta esa especie de bunker antiguo parece que no hay nadie dentro")
+print("A cual deberiamos ir para estar a salvo")
+print("ESCOGE 1 PARA IR A LA CASA, ESCOGE 2 PARA IR AL BUNKER ABANDONADO")
+decision=int(input())
+if decision==1:
+    print("FUISTE A LA CASA")
+    print("TE ENCONTRASTE UNA AK-47")
+    print("Cogela nos servira util para cualquier mal que nos encontremos")
+    Arma.append(Arma("AK-47",10,5,7,4))
+elif decision==2:
+    print("FUISTE AL BUNKER ABANDONADO")
+    print("TE ENCONTRASTE UNA REVOLVER")
+    print("Cogela nos servira util para cualquier mal que nos encontremos")
+    Arma.append(Arma("REVOLVER",7,8,5,10))
 
-
+print("20 MINUTOS DESPUES")

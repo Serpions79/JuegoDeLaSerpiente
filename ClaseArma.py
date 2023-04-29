@@ -1,4 +1,4 @@
-class Amra:
+class Arma:
     ataque=0
     defensa=0
     resistencia=0
