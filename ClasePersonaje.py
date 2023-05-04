@@ -4,12 +4,14 @@ class Personaje:
     ataque_actual=0
     defensa_actual=0
     objetos=[]
-    def __init__(self,nombre,vida,ataque_actual,defensa_actual,objetos):
+    armas=[]
+    def __init__(self,nombre,vida,ataque_actual,defensa_actual,objetos,armas):
         self.nombre = nombre
         self.vida = vida
         self.ataque_actual = ataque_actual
         self.defensa_actual = defensa_actual
         self.objetos = objetos
+        self.armas = armas
     def buscarObjeto(self,nombre):
         encontrado=0
         i=0
