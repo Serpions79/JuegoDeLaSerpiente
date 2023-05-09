@@ -23,12 +23,18 @@ print("Ya sabemos que hacer...por asi decirlo")
 print("Oye yo soy tu consciencia y como tal seguramente hare unas preguntas en el viaje")
 print("No hay problema no?")
 print("ESCOGE 1 PARA DECIR SÍ ESCOGE 2 PARA DECIR NO (PUDRETE)")
-decision=int(input())
-if decision==1:
-    print("Gracias por entenderme intentare no molestarte mucho en tu cabeza")
-elif decision==2:
-    print("Perdon...")
-else: print("Bruh")
+
+while True:
+    decision=int(input())
+    if decision==1:
+        print("Gracias por entenderme intentare no molestarte mucho en tu cabeza")
+        break
+    elif decision==2:
+        print("Perdon...")
+        break
+    else: print("Bruh")
+    print("ESCOGE 1 PARA DECIR SÍ ESCOGE 2 PARA DECIR NO (PUDRETE)")
+
 print("5 MINUTOS DESPUES")
 print("Ok creo que la casa del tio Ben estaba a la derecha")
 print("*Se escucha un tiroteo*")
