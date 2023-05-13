@@ -1,5 +1,6 @@
 from ClaseArma import Arma
 from ClasePersonaje import Personaje
+from ClaseArmadura import Armadura
 
 print("Dia: 17 de Agosto")
 print("Hora: 9:38 am")
@@ -11,8 +12,7 @@ print("Hace tanto que hasta se me olvido tu nombre")
 
 Nombre_del_personaje=input()
 
-player=Personaje(Nombre_del_personaje,100,0,0,[],[])
-
+player=Personaje(Nombre_del_personaje,100,0,0,[],[],[])
 print("Es verdad cuanto tiempo " +  Nombre_del_personaje + ", espero que estes tan bien como estoy yo")
 print(Nombre_del_personaje + ", si estoy aqui hablando contigo es que algo malo ha ocurrido recuerda lo que nos dijo el tio Ben")
 print("Si comes lechugas te convertiras en un superheroe")
@@ -25,11 +25,11 @@ print("No hay problema no?")
 print("ESCOGE 1 PARA DECIR SÍ ESCOGE 2 PARA DECIR NO (PUDRETE)")
 
 while True:
-    decision=int(input())
-    if decision==1:
+    decision=input()
+    if decision=="1":
         print("Gracias por entenderme intentare no molestarte mucho en tu cabeza")
         break
-    elif decision==2:
+    elif decision=="2":
         print("Perdon...")
         break
     else: print("Bruh")
@@ -44,16 +44,43 @@ print("Corre " + Nombre_del_personaje + " hay que salir de aqui cuanto antes")
 print("Hay una casa que parece bastante segura, pero tambien esta esa especie de bunker antiguo parece que no hay nadie dentro")
 print("A cual deberiamos ir para estar a salvo")
 print("ESCOGE 1 PARA IR A LA CASA, ESCOGE 2 PARA IR AL BUNKER ABANDONADO")
-decision=int(input())
-if decision==1:
-    print("FUISTE A LA CASA")
-    print("TE ENCONTRASTE UNA AK-47")
-    print("Cogela nos servira util para cualquier mal que nos encontremos")
-    player.armas.append(Arma("AK-47",10,5,7,4))
-elif decision==2:
-    print("FUISTE AL BUNKER ABANDONADO")
-    print("TE ENCONTRASTE UNA REVOLVER")
-    print("Cogela nos servira util para cualquier mal que nos encontremos")
-    player.armas.append(Arma("REVOLVER",7,8,5,10))
 
+while True:
+    decision=input()
+    if decision=="1":
+        print("FUISTE A LA CASA")
+        print("TE ENCONTRASTE UNA AK-47")
+        print("Cogela nos servira util para cualquier mal que nos encontremos")
+        player.armas.append(Arma("AK-47",10,0,7,5))
+        print("Quieres ver si hay mas cosas " + Nombre_del_personaje + " ?")
+        print("ESCOGE 1 PARA DECIR SÍ ESCOGE 2 PARA DECIR NO (PUDRETE)")
+        while True:
+            decision=input()
+            if decision=="1":
+                print("Has econtrado una ARMADURA DE MAYA")
+                player.armaduras.append(Armadura("ARMADURA DE MAYA",5,4,1))
+                break
+            elif decision=="2":
+                print("Vaya no recordaba que eras tan aburrido")
+                break
+            else: print("Bruh")
+        break
+    elif decision=="2":
+        print("FUISTE AL BUNKER ABANDONADO")
+        print("TE ENCONTRASTE UNA REVOLVER")
+        print("Cogela nos servira util para cualquier mal que nos encontremos")
+        player.armas.append(Arma("REVOLVER",7,0,5,10))
+        print("Quieres ver si hay mas cosas " + Nombre_del_personaje + " ?")
+        print("ESCOGE 1 PARA DECIR SÍ ESCOGE 2 PARA DECIR NO (PUDRETE)")
+        while True:
+            decision=input()
+            if decision=="1":
+                print("No hemos encontrado nada mala suerte")
+                break
+            elif decision=="2":
+                print("Ok mejor vamonos ya")
+                break
+            else: print("Bruh")
+        break
+    else: print("Bruh")
 print("20 MINUTOS DESPUES")
