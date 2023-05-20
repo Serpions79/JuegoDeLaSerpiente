@@ -1,10 +1,12 @@
 from ClaseArma import Arma
 from ClasePersonaje import Personaje
 from ClaseArmadura import Armadura
+from ClaseEnemigo import Combate
+from ClaseEnemigo import Enemigo
 
 print("Dia: 17 de Agosto")
-print("Hora: 9:38 am")
-print("Buenos dias persona")
+print("Hora: 21:56 pm")
+print("Buenas ser humano")
 print("Soy tu consciencia")
 print("Hace mucho que no hablamos tu y yo")
 print("La ultima vez fue cuando tenias como 4 años")
@@ -13,6 +15,7 @@ print("Hace tanto que hasta se me olvido tu nombre")
 Nombre_del_personaje=input()
 
 player=Personaje(Nombre_del_personaje,100,0,0,[],[],[])
+Enemigos=[]
 print("Es verdad cuanto tiempo " +  Nombre_del_personaje + ", espero que estes tan bien como estoy yo")
 print(Nombre_del_personaje + ", si estoy aqui hablando contigo es que algo malo ha ocurrido recuerda lo que nos dijo el tio Ben")
 print("Si comes lechugas te convertiras en un superheroe")
@@ -64,6 +67,7 @@ while True:
                 print("Vaya no recordaba que eras tan aburrido")
                 break
             else: print("Bruh")
+            print("ESCOGE 1 PARA DECIR SÍ ESCOGE 2 PARA DECIR NO (PUDRETE)")
         break
     elif decision=="2":
         print("FUISTE AL BUNKER ABANDONADO")
@@ -81,6 +85,54 @@ while True:
                 print("Ok mejor vamonos ya")
                 break
             else: print("Bruh")
+            print("ESCOGE 1 PARA DECIR SÍ ESCOGE 2 PARA DECIR NO (PUDRETE)")
         break
     else: print("Bruh")
-print("20 MINUTOS DESPUES")
+    print("ESCOGE 1 PARA DECIR SÍ ESCOGE 2 PARA DECIR NO (PUDRETE)")
+print("*15 minutos despues*")
+print("Vaya parece que todos esos disparos ya se han acabado")
+print("Veamos que ha pasado")
+print("*sale del escondite*")
+print("NO PUEDE SER, HAY UN MONTON DE CADAVERES")
+print("Esto no es normal")
+print("Estamos en el barrio Weberly una zona muy tranquila")
+print("Quieres investigar que ha pasado o seguimos el camino?")
+print("ESCOGE 1 PARA INVESTIGAR ESCOGE 2 PARA CONTINUAR EL CAMINO")
+while True:
+    decision=input()
+    if decision=="1":
+        print("Veamos que hay en esos cadaveres de alla")
+        print("Parece que tienen una marca en ellos")
+        print("*Escuchas un rugido de una especie de animal peligroso")
+        print("CORRE SALGAMOS ANTES DE QUE ESA COSA VENGA A POR NOSOTROS")
+        print("*corres hacia el bosque para despistar a la bestia*")
+        break
+    elif decision=="2":
+        print("Ok sigamos el camino")
+        print("*te tropiezas con una piedra y te quedas incosciente*")
+        print("Parece que te has quedado dormido y ya es de noche")
+        print("Estamos en una especie de bosque")
+        break
+    else: print("Bruh")
+    print("ESCOGE 1 PARA DECIR SÍ ESCOGE 2 PARA DECIR NO (PUDRETE)")
+print("Vayamos a esa cueva parece segura para pasar la noche")
+print("*Avanzas epicamente por la cueva*")
+print("La cueva se divide en 2")
+print("¿Por donde quieres ir?")
+print("ESCOGE 1 PARA IR A LA IZQUIERDA ESOCGE 2 PARA IR A LA DERECHA")
+while True:
+    decision=input()
+    if decision=="1":
+        print("*Sigas caminando epicamente y te encuentras a un OSO HORMIGUERO")
+        Enemigos.append(Enemigo("OSO HORMIGUERO",10,1,2))
+        print("EPIEZA EL COMBATE")
+        Combate(player,Enemigos)
+    elif decision=="2":
+        print("*Sigas caminando epicamente y te encuentras a un BHUO DE 1 METRO")
+        Enemigos.append(Enemigo("BHUO DE 1 METRO",10,1,2))
+        Combate(player,Enemigos)
+        print("EPIEZA EL COMBATE")
+    else: print("Bruh")
+    print("ESCOGE 1 PARA IR A LA IZQUIERDA ESOCGE 2 PARA IR A LA DERECHA")
+
+        

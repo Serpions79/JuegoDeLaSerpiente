@@ -1,3 +1,4 @@
+import random
 class Enemigo:
     nombre=""
     vida=0
@@ -31,6 +32,7 @@ def Combate(personaje,enemigos):
           decision=int(input())
           if decision==1:
               print("Ataque")
+              turno_player = 0
           elif decision==2:
               numerorandom=random.uniform(0,100)
               if 20>=numerorandom:
