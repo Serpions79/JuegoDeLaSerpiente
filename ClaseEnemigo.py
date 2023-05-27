@@ -14,16 +14,16 @@ def Combate(personaje,enemigos):
    turno_player = 1
    while True:   
        print("Tu vida actual es " + str (personaje.vida))
-       num_enemigos = 0
+       indice_enemigos = 0
        if turno_player == 0:
-           while num_enemigos < len(enemigos):
-               if enemigos[num_enemigos].ataque > personaje.defensa_actual:
-                   resultado = - personaje.defensa_actual + enemigos[num_enemigos].ataque
+           while indice_enemigos < len(enemigos):
+               if enemigos[indice_enemigos].ataque > personaje.defensa_actual:
+                   resultado = - personaje.defensa_actual + enemigos[indice_enemigos].ataque
                    personaje.vida = personaje.vida - resultado
-                   print(enemigos[num_enemigos].nombre + "Te ha atacado y te ha hecho " + str(resultado) + " de daño.")
+                   print(enemigos[indice_enemigos].nombre + "Te ha atacado y te ha hecho " + str(resultado) + " de daño.")
                else:
                    print("No te ha hecho daño") 
-               num_enemigos=num_enemigos + 1
+               indice_enemigos=indice_enemigos + 1
            print("Te ha queado " + str (personaje.vida))
            turno_player = 1
        else:
@@ -31,7 +31,15 @@ def Combate(personaje,enemigos):
           print("Que quieres hacer? 1 para atacar, 2 para huir ")
           decision=int(input())
           if decision==1:
-              print("Ataque")
+             if enemigos>1:
+              while indice_enemigos < len(enemigos):
+                  print("A que enemigo prefieres atacar primero?")
+                  print(enemigos[indice_enemigos].nombre)
+                  indice_enemigos=indice_enemigos + 1
+              decision=int(input())
+              indice_enemigos=decision - 1
+              resultado = personaje.ataque_actual - enemigos[indice_enemigos].defensa
+              enemigos[indice_enemigos].vida = enemigos[indice_enemigos].vida - resultado
               turno_player = 0
           elif decision==2:
               numerorandom=random.uniform(0,100)
@@ -41,3 +49,4 @@ def Combate(personaje,enemigos):
               else:
                   print("No has podido huir *risas enlatadas*")
                   turno_player = 0
+                 
