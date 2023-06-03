@@ -125,11 +125,12 @@ while True:
     if decision=="1":
         print("*Sigas caminando epicamente y te encuentras a un OSO HORMIGUERO")
         Enemigos.append(Enemigo("OSO HORMIGUERO",10,1,2))
-        print("EPIEZA EL COMBATE")
+        print("EMPIEZA EL COMBATE")
         Combate(player,Enemigos)
     elif decision=="2":
         print("*Sigas caminando epicamente y te encuentras a un BHUO DE 1 METRO")
         Enemigos.append(Enemigo("BHUO DE 1 METRO",10,1,2))
+        print("EMPIEZA EL COMBATE")
         Combate(player,Enemigos)
         print("EPIEZA EL COMBATE")
     else: print("Bruh")

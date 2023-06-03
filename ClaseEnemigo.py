@@ -31,7 +31,7 @@ def Combate(personaje,enemigos):
           print("Que quieres hacer? 1 para atacar, 2 para huir ")
           decision=int(input())
           if decision==1:
-             if enemigos>1:
+             if len(enemigos)>1:
               while indice_enemigos < len(enemigos):
                   print("A que enemigo prefieres atacar primero?")
                   print(enemigos[indice_enemigos].nombre)
@@ -41,6 +41,12 @@ def Combate(personaje,enemigos):
               resultado = personaje.ataque_actual - enemigos[indice_enemigos].defensa
               enemigos[indice_enemigos].vida = enemigos[indice_enemigos].vida - resultado
               turno_player = 0
+             else:  
+              resultado = personaje.ataque_actual - enemigos[indice_enemigos].defensa
+              enemigos[indice_enemigos].vida = enemigos[indice_enemigos].vida - resultado
+              turno_player = 0
+              print("Has hecho " + str(resultado) + "de daño")
+              print("La vida del" + str(enemigos.nombre) + " es de " + str(enemigos.vida) )
           elif decision==2:
               numerorandom=random.uniform(0,100)
               if 20>=numerorandom:
