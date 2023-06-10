@@ -4,7 +4,7 @@ class Enemigo:
     vida=0
     ataque=0
     defensa=0
-    def __init__(self,nombre,vida,ataque,defensa):
+    def init(self,nombre,vida,ataque,defensa):
         self.nombre = nombre
         self.vida = vida
         self.ataque = ataque
@@ -46,13 +46,12 @@ def Combate(personaje,enemigos):
               enemigos[indice_enemigos].vida = enemigos[indice_enemigos].vida - resultado
               turno_player = 0
               print("Has hecho " + str(resultado) + "de daño")
-              print("La vida del" + str(enemigos.nombre) + " es de " + str(enemigos.vida) )
+              print("La vida del" + str(enemigos[indice_enemigos].nombre) + " es de " + str(enemigos[indice_enemigos].vida)) 
           elif decision==2:
               numerorandom=random.uniform(0,100)
               if 20>=numerorandom:
                   print("Has escapado")
                   break
               else:
-                  print("No has podido huir *risas enlatadas*")
+                  print("No has podido huir risas enlatadas")
                   turno_player = 0
-                 
