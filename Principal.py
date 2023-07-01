@@ -3,6 +3,7 @@ from ClasePersonaje import Personaje
 from ClaseArmadura import Armadura
 from ClaseEnemigo import Combate
 from ClaseEnemigo import Enemigo
+from ClaseObjeto  import Objeto
 
 print("Dia: 17 de Agosto")
 print("Hora: 21:56 pm")
@@ -55,6 +56,7 @@ while True:
         print("TE ENCONTRASTE UNA AK-47")
         print("Cogela nos servira util para cualquier mal que nos encontremos")
         player.armas.append(Arma("AK-47",10,0,7,5))
+        player.equiparArma("AK-47")
         print("Quieres ver si hay mas cosas " + Nombre_del_personaje + " ?")
         print("ESCOGE 1 PARA DECIR SÍ ESCOGE 2 PARA DECIR NO (PUDRETE)")
         while True:
@@ -135,5 +137,33 @@ while True:
         print("EPIEZA EL COMBATE")
     else: print("Bruh")
     print("ESCOGE 1 PARA IR A LA IZQUIERDA ESOCGE 2 PARA IR A LA DERECHA")
-
-        
+print("Eso fue intenso")
+print("Si que tienes habilidad de luchador")
+print("Pero volvamos a lo importante")
+print("Tenemos que dormir")
+print("* " + Nombre_del_personaje + " duerme epicamente*")
+print("Dia: 18 de Agosto")
+print("Hora: 8:25 am")
+print("*se hace de dia epicamente*")
+print("Buenos dias " + Nombre_del_personaje)
+print("Tenemos que continuar nuestro camino ")
+print("Te tengo una idea para que el viaje sea mas entretenido")
+print("La verdad me gusta mucho la geografia")
+print("Ha si que cada mañana te hare una pregunta de geografia")
+print("Si lo aciertas te dare un objeto misterioso")
+print("LA PREGUNTA DEL DIA DE HOY ESSSS")
+print("Cual es la capital de Paraguay")
+print("1 -> Asunción, 2 -> Montevideo, 3 -> Bogotá")
+while True:
+    decision=input()
+    if decision=="1":
+        print("Eso es... CORRECTO")
+        print("El premio de hoy es un osito de peluche")
+        player.objetos.append(Objeto("OSITO DE PELUCHE",5))
+    if decision=="2":
+        print("Incorrecto, mas suerte la proxima vez")
+    if decision=="3":
+        print("Incorrecto, mas suerte la proxima vez")
+    else: print("Bruh")
+    print("Cual es la capital de Paraguay")
+    print("1 -> Asunción, 2 -> Montevideo, 3 -> Bogotá")

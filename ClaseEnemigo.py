@@ -4,7 +4,7 @@ class Enemigo:
     vida=0
     ataque=0
     defensa=0
-    def init(self,nombre,vida,ataque,defensa):
+    def __init__(self,nombre,vida,ataque,defensa):
         self.nombre = nombre
         self.vida = vida
         self.ataque = ataque

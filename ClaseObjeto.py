@@ -1,4 +1,5 @@
 class Objeto:
-    energia=0
-    usos=0
-    
+    valor=0
+    def __init__(self,nombre,valor):
+        self.nombre = nombre
+        self.valor = valor
