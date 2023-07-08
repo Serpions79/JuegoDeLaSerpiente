@@ -41,12 +41,20 @@ def Combate(personaje,enemigos):
               resultado = personaje.ataque_actual - enemigos[indice_enemigos].defensa
               enemigos[indice_enemigos].vida = enemigos[indice_enemigos].vida - resultado
               turno_player = 0
+              print("Has hecho " + str(resultado) + "de daño")
+              print("La vida del" + str(enemigos[indice_enemigos].nombre) + " es de " + str(enemigos[indice_enemigos].vida)) 
              else:  
               resultado = personaje.ataque_actual - enemigos[indice_enemigos].defensa
               enemigos[indice_enemigos].vida = enemigos[indice_enemigos].vida - resultado
               turno_player = 0
               print("Has hecho " + str(resultado) + "de daño")
               print("La vida del" + str(enemigos[indice_enemigos].nombre) + " es de " + str(enemigos[indice_enemigos].vida)) 
+             if (enemigos[indice_enemigos].vida) <= 0:
+                print("Has acabo con " + (enemigos[indice_enemigos].nombre))
+                enemigos.pop(indice_enemigos)
+                if len(enemigos) == 0:
+                    print("Felicidades has acabado con todos los enemigos :D")
+                    break
           elif decision==2:
               numerorandom=random.uniform(0,100)
               if 20>=numerorandom:

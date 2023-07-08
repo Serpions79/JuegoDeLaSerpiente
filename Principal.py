@@ -69,13 +69,14 @@ while True:
                 print("Vaya no recordaba que eras tan aburrido")
                 break
             else: print("Bruh")
-            print("ESCOGE 1 PARA DECIR SÍ ESCOGE 2 PARA DECIR NO (PUDRETE)")
+            print("ESCOGE 1 PARA IR A LA CASA, ESCOGE 2 PARA IR AL BUNKER ABANDONADO")
         break
     elif decision=="2":
         print("FUISTE AL BUNKER ABANDONADO")
         print("TE ENCONTRASTE UNA REVOLVER")
         print("Cogela nos servira util para cualquier mal que nos encontremos")
         player.armas.append(Arma("REVOLVER",7,0,5,10))
+        player.equiparArma("REVOLVER")
         print("Quieres ver si hay mas cosas " + Nombre_del_personaje + " ?")
         print("ESCOGE 1 PARA DECIR SÍ ESCOGE 2 PARA DECIR NO (PUDRETE)")
         while True:
@@ -129,14 +130,16 @@ while True:
         Enemigos.append(Enemigo("OSO HORMIGUERO",10,1,2))
         print("EMPIEZA EL COMBATE")
         Combate(player,Enemigos)
+        break
     elif decision=="2":
         print("*Sigas caminando epicamente y te encuentras a un BHUO DE 1 METRO")
         Enemigos.append(Enemigo("BHUO DE 1 METRO",10,1,2))
         print("EMPIEZA EL COMBATE")
         Combate(player,Enemigos)
-        print("EPIEZA EL COMBATE")
+        break
     else: print("Bruh")
     print("ESCOGE 1 PARA IR A LA IZQUIERDA ESOCGE 2 PARA IR A LA DERECHA")
+    break
 print("Eso fue intenso")
 print("Si que tienes habilidad de luchador")
 print("Pero volvamos a lo importante")
@@ -160,10 +163,43 @@ while True:
         print("Eso es... CORRECTO")
         print("El premio de hoy es un osito de peluche")
         player.objetos.append(Objeto("OSITO DE PELUCHE",5))
+        break
     if decision=="2":
         print("Incorrecto, mas suerte la proxima vez")
+        break
     if decision=="3":
         print("Incorrecto, mas suerte la proxima vez")
+        break
     else: print("Bruh")
     print("Cual es la capital de Paraguay")
     print("1 -> Asunción, 2 -> Montevideo, 3 -> Bogotá")
+    break
+print("A todo esto")
+print("Teniamos que ir a la casa del tio Ben")
+print("¿Haber veamos donde estaba el norte?")
+print("Ya se por aqui")
+print("*4 horas despues*")
+print("Creo que deberiamos parar y comer algo no hemos comido aun nada")
+print("Mira segun este mapa de aqui ay 2 sitios que podria haber comida por este bosque")
+print("Cual prefieres, el lago de la perdicion o el jardin bexter?")
+print("El lago de la perdicion -> 1 El jardin Bexter -> 2")
+while True:
+    decision=input()
+    if decision== "1":
+        print("Ok vayamos a la aventura del lago de la perdicion")
+        print("*Llegas al lago epicamente*")
+        print("Mira hay frutos del bosque")
+        print("Oh no")
+        print("Hay un LOBO JOVEN")
+        print("Preparate para la pelea")
+        Enemigos.append(Enemigo("LOBO JOVEN",10,2,2))
+        break
+    elif decision=="2":
+        print("Ok vayamos al jardin de Bexter")
+        print("Mira alla hay carne de ciervo, podemos cocinarla mas tarde")
+        print("*Cojes la carne y te vas epicamente*")
+        break
+    else: print("Bruh")
+    print("Cual prefieres, el lago de la perdicion o el jardin bexter?")
+    print("El lago de la perdicion -> 1 El jardin Bexter -> 2")
+    break
