@@ -37,7 +37,19 @@ class Personaje:
                 i=i+1
         if equipacion==1:
             self.ataque_actual=self.ataque_actual + self.armas[i].ataque
-            self.defensa_actual=self.defensa_actual + self.armas[i].defensa
+            return 1
+        else:
+            return 0
+    def equiparArmadura(self,nombre,):
+        equipacion=0
+        i=0
+        while i<len(self.armaduras) and equipacion==0:
+            if self.armaduras[i].nombre ==nombre:
+                equipacion=1
+            else:
+                i=i+1
+        if equipacion==1:
+            self.defensa_actual=self.defensa_actual + self.armaduras[i].defensa
             return 1
         else:
             return 0

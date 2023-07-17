@@ -193,6 +193,8 @@ while True:
         print("Hay un LOBO JOVEN")
         print("Preparate para la pelea")
         Enemigos.append(Enemigo("LOBO JOVEN",10,2,2))
+        print("EMPIEZA EL COMBATE")
+        Combate(player,Enemigos)
         break
     elif decision=="2":
         print("Ok vayamos al jardin de Bexter")
@@ -203,3 +205,4 @@ while True:
     print("Cual prefieres, el lago de la perdicion o el jardin bexter?")
     print("El lago de la perdicion -> 1 El jardin Bexter -> 2")
     break
+
